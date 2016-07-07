@@ -17,11 +17,11 @@ gavatar: http://dreamofbook.qiniudn.com/Az..png
 favicon: img/favicon.png
 
 douban_username:
-twitter_username:zenghongliang
-github_username:zhldev
-facebook_username:zenghongliang
-weibo_username:iwangleung
-zhihu_username:zeng-hongliang
+twitter_username:"zenghongliang"
+github_username:"zhldev"
+facebook_username:"zenghongliang"
+weibo_username:"iwangleung"
+zhihu_username:"zeng-hongliang"
 
 # Build settings
 # use Github Flavored Markdown !important
