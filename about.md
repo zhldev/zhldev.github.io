@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About"
-description: "学苟知本，六经皆我注脚 "
+description: "知易行难 "
 header-img: "img/green.jpg"
 ---
 
@@ -9,16 +9,15 @@ header-img: "img/green.jpg"
 <center>
 </center>
 
-Hey,你好!我是曾宏亮彬(@zhldev)，乐观的未来主义者，目前正从事iOS开发。 向往自由，乐观积极，对新生事物有着极其浓厚的兴趣。
+Hey,你好!我是曾宏亮(@zhldev)，乐观的未来主义者，目前正从事iOS开发。 向往自由，乐观积极，对新生事物有着极其浓厚的兴趣。
 
 
-ing **Learn swift** 。
+**Learn swift** 。
 
-###坚信
+###信条
 
 
 - 作人，一定要作一個「超乎現狀的存在」。
-
 - 總而言之，就是「超存在」。
 
 
