@@ -45,7 +45,7 @@ Closures是自包含的功能块。它可以捕获和存储其所在上下文的
 
 在视图初始方案里面调用闭包，OC block 和 swift 解决方案对比
    
-	override func viewDidLoad() {
+	override func viewDidLoad(){
         super.viewDidLoad()
         //OC中的解决方案
         weak typeof(self) weakSelf = self
@@ -58,7 +58,7 @@ Closures是自包含的功能块。它可以捕获和存储其所在上下文的
 
 定义一个闭包方法，并且给一个循环 self 循环属性
    
- 	 func loadData(finished:()->()){
+	func loadData(finished:()->(){
          print("执行耗时操作")
          self.finished = finished
          finished()
@@ -78,6 +78,45 @@ Closures是自包含的功能块。它可以捕获和存储其所在上下文的
 
 ##3、(闭包的返回值和参数) -> () in
 
+在viewDidLoad调用闭包，返回一个ScrollView，传入自定义按钮，创建按钮个数
+    	 	 
+         scrollView = createScroView({ () -> Int in
+            return 8
+            }, btnWithIndex: { (index) -> UIView in
+                let width = 80
+                let btn = UIButton()
+                btn.setTitle("标题\(index)", forState: .Normal)
+                btn.frame = CGRect(x: index*width+5, y: 0, width: width, height:50 )
+                return btn
+        })
+
+
+    
+
+通过闭包创建按钮视图，传入按钮个数，返回ScrollView
+
+    func createScroView(btnCount: ()-> Int, btnWithIndex: (index: Int) -> UIView) -> UIScrollView{
+        let count = btnCount()
+        
+
+        for i in 0..<count{
+            
+            let subView = btnWithIndex(index: i)
+            scrollView.addSubview(subView)
+            scrollView.contentSize = CGSize(width: CGFloat(count)*subView.frame.width, height: 50)
+
+
+            /*
+            let btn = UIButton()
+            btn.setTitle("标题\(i)", forState: .Normal)
+            btn.frame = CGRect(x: i*width+5, y: 0, width: width, height:50 )
+            scrollView.addSubview(btn)
+             */
+
+        }
+ 
+        return scrollView
+    }
 
 
 
@@ -103,10 +142,12 @@ Closures是自包含的功能块。它可以捕获和存储其所在上下文的
 心态软弱，在认为你的言论正确。你的正确，仅仅只是正确而已，我并需要那种东西。
 
 
-
+<!--
 
 ----
 
 
 
-<!--（题图：saurabh mohnot by Nik FC）-->
+（题图：saurabh mohnot by Nik FC）
+
+-->
