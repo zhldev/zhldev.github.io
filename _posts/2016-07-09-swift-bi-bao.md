@@ -42,13 +42,11 @@ Closures是自包含的功能块。它可以捕获和存储其所在上下文的
     `//当前写法代表闭包返回值可以是nil
     var finished: (()->())?`
 
-在视图初始方案里面调用闭包，OC bolok 和 swift 解决方案对比
+在视图初始方案里面调用闭包，OC block 和 swift 解决方案对比
     `override func viewDidLoad() {
         super.viewDidLoad()
-
         //OC中的解决方案
         weak typeof(self) weakSelf = self
-
          weak var weakSelf = self
          loadData {
              print("回到主线程，更新UI")
@@ -84,15 +82,14 @@ Closures是自包含的功能块。它可以捕获和存储其所在上下文的
 —End—
 
 ##迭代
-
 <!--
 - 2015-09-14 01:52:09 再改
 * 2015年6月19日 19:36:49 四稿
 * 2015年6月17日 19:51:24 三稿
-* 2015年6月16日 20:11:01 二稿
-* 2015年6月15日 19:09:17 初稿
-
 -->
+* 2016年7月9日 12:13 完成循环引用章节
+* 2016年7月8日 23:11 构建文章框架
+
 
 
 ---
