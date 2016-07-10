@@ -39,11 +39,14 @@ Closures是自包含的功能块。它可以捕获和存储其所在上下文的
 
 在swift下要给属性赋初始值
 
-    `//当前写法代表闭包返回值可以是nil
-    var finished: (()->())?`
+  ```
+//当前写法代表闭包返回值可以是nil
+    var finished: (()->())?
+```
 
 在视图初始方案里面调用闭包，OC block 和 swift 解决方案对比
-    `override func viewDidLoad() {
+   ```
+	override func viewDidLoad() {
         super.viewDidLoad()
         //OC中的解决方案
         weak typeof(self) weakSelf = self
@@ -52,26 +55,28 @@ Closures是自包含的功能块。它可以捕获和存储其所在上下文的
              print("回到主线程，更新UI")
              weakSelf!.view.backgroundColor = UIColor.redColor()
          }
-     }`
+     }
+     ```
 
 定义一个闭包方法，并且给一个循环 self 循环属性
-    `func loadData(finished:()->()){
+  ``` 
+  func loadData(finished:()->()){
          print("执行耗时操作")
          self.finished = finished
          finished()
-     }`
+     }
+
+```
 
 循环引用示意图
 
 ![闭包循环引用](http://oa1viup98.bkt.clouddn.com/bibaoxunhuanyinyong.png)
 
 
-
-
      //出栈会被释放，相当于OC中的dealloc
      deinit{
          print("退出栈，回退")
-     }`
+     }
 
 
 ##3、(闭包的返回值和参数) -> () in
@@ -87,6 +92,7 @@ Closures是自包含的功能块。它可以捕获和存储其所在上下文的
 * 2015年6月19日 19:36:49 四稿
 * 2015年6月17日 19:51:24 三稿
 -->
+
 * 2016年7月9日 12:13 完成循环引用章节
 * 2016年7月8日 23:11 构建文章框架
 
